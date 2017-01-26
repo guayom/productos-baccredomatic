@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="large-12 columns">
+    <div class="top"></div>
+    <ul class="breadcrumbs">
+      <li><a href="/es-cr">Inicio</a></li>
+      <% current_page.data.breadcrumbs.each do |b| %>
+        <li><a href="#"><%= b %></a></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

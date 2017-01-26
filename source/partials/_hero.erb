@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="large-12 columns">
+    <div id="hero">
+      <img src="<%= current_page.data.hero_image.nil? ? 'http://placehold.it/1260x345' : current_page.data.hero_image %>" />
+      <div class="row">
+        <div class="large-6 columns">
+          <div id="hero-text">
+            <h2><%= current_page.data.title %></h2>
+            <p><%= current_page.data.hero_text %></p>
+            <% unless current_page.data.cta_text.nil? %>
+              <a class="button" href="#"><%= current_page.data.cta_text %></a>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

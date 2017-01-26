@@ -1,0 +1,13 @@
+<div class="row requisitos">
+  <div class="large-6 columns">
+    <ul>
+      <% if current_page.data.requisitos.nil? %>
+        <p>Faltan requisitos</p>
+      <% else %>
+        <% current_page.data.requisitos.each do |requisito| %>
+          <li><%= requisito %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>

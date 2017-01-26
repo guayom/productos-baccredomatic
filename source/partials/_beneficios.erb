@@ -1,0 +1,23 @@
+<div class="beneficios-container">
+  <div class="row">
+    <div class="large-12 columns">
+      <h3>Beneficios</h3>
+    </div>
+  </div>
+  <div class="row beneficios">
+    <% current_page.data.beneficios.each_with_index do |beneficio, index| %>
+      <% if index == 3 or index == 6 %>
+        </div>
+        <div class="row beneficios">
+      <% end %>
+      <div class="small-2 large-4 columns">
+        <img src="http://placehold.it/69x56">
+        <h4><%= beneficio.texto %></h4>
+        <% unless beneficio.p.nil? %>
+          <br/>
+          <%= beneficio.p %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

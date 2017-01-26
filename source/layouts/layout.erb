@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "Páginas de producto en baccredomatic.com" %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/4.3.2/css/foundation.min.css" />
+
+    <%= stylesheet_link_tag :site %>
+  </head>
+
+  <body class="<%= page_classes %>">
+    <%= partial "partials/header" %>
+    <%= partial "partials/hero" %>
+    <%= partial "partials/panels" %>
+    <%= yield %>
+    <%= partial "partials/productos_relacionados" %>
+    <%= partial "partials/footer" %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/4.3.2/js/vendor/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/4.3.2/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

@@ -5,12 +5,25 @@ layout: layout
 <div class="row">
   <div class="large-10 large-offset-1 columns">
     <h1><%= current_page.data.title %></h1>
-    <ul>
-      <% sitemap.resources.each do |r| %>
-        <% unless r.data.title.nil? or r.data.title == "Índice de páginas" %>
-          <li><a target="_blank" href="<%= r.url %>"><%= r.data.title %></li>
+    <table>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Requisitos</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% sitemap.resources.each do |r| %>
+          <% unless r.data.title.nil? or r.data.title == "Índice de páginas" %>
+            <tr>
+              <td><a target="_blank" href="<%= r.url %>"><%= r.data.title %></td>
+              <td><%= r.data.requisitos.nil? ? "No" : "Sí" %></td>
+              <td><%= r.data.hero_text.nil? ? "No" : "Sí" %></td>
+            </tr>
+          <% end %>
         <% end %>
-      <% end %>
-    </ul>
+      </tbody>
+    </table>
   </div>
 </div>

@@ -112,8 +112,9 @@
     margin-bottom: 30px;
   }
   img{
-    float: left;
-    margin-right: 20px;
+    position: absolute;
+    left: 20px;
+    top: 0;
   }
   h4{
     margin-bottom: 0;
@@ -127,6 +128,25 @@
     font-family: "Trebuchet MS","Lucida Grande","Lucida Sans","Tahoma","sans-serif";
     font-weight: bold;
     line-height: 1.4;
+  }
+  .icon-container{
+    float: left;
+    width: auto;
+  }
+  .beneficio-container{
+    float: left;
+    width: auto;
+  }
+  .columns{
+    padding-left: 106px;
+    position: relative;
+  }
+  ul{
+    margin: 0 0 0 20px;
+    padding: 0;
+  }
+  li{
+    font-size: 13px;
   }
 }
 

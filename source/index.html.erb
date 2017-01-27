@@ -1,13 +1,16 @@
 ---
-title: Welcome to Middleman
+title: Índice de páginas
+layout: layout
 ---
-
-<div class="welcome">
-  <div class="logo">
-    <%= image_tag "middleman-logo.svg" %>
+<div class="row">
+  <div class="large-10 large-offset-1 columns">
+    <h1><%= current_page.data.title %></h1>
+    <ul>
+      <% sitemap.resources.each do |r| %>
+        <% unless r.data.title.nil? or r.data.title == "Índice de páginas" %>
+          <li><a target="_blank" href="<%= r.url %>"><%= r.data.title %></li>
+        <% end %>
+      <% end %>
+    </ul>
   </div>
-  <h1>Middleman is Running</h1>
-  <p class="doc">
-    <%= link_to "Read Documentation Online", "https://middlemanapp.com", target: "_blank" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+</div>

@@ -109,12 +109,14 @@
 .beneficios{
   .columns{
     text-align: left;
+    min-height: 56px;
     margin-bottom: 30px;
   }
   img{
     position: absolute;
     left: 20px;
     top: 0;
+    width: 56px;
   }
   h4{
     margin-bottom: 0;

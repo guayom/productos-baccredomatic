@@ -15,7 +15,7 @@ layout: layout
       </thead>
       <tbody>
         <% sitemap.resources.each do |r| %>
-          <% unless r.data.title.nil? or r.data.title == "Índice de páginas" %>
+          <% unless r.data.title.nil? or r.data.title == "Índice de páginas" or r.data.title == "Tarjeta Automercado American Express®"%>
             <tr>
               <td><a target="_blank" href="<%= r.url %>"><%= r.data.title %></td>
               <td><%= r.data.requisitos.nil? ? "No" : "Sí" %></td>

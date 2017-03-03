@@ -6,7 +6,7 @@ breadcrumbs:
   - Nuestros Seguros
   - Seguro autoexpedible Canasta Protegida
 
-hero_text: Asegúrate de que a los tuyos nada les suceda, haz tu parte respaldando su futuro.
+hero_text: Asegúrate de que a los tuyos nada les suceda, haz tu parte respaldando su futuro. SUGESE G07-46-A05-664.
 hero_image: canasta-protegida.jpg
 
 beneficios:
@@ -26,8 +26,33 @@ beneficios:
 requisitos:
   - Cualquier cliente.
   - Medio automático de pago. Tarjeta de cualquier banco.
+  - No padecer enfermedades excluyentes
+  - Falta indicar No tiene limite de edad
 ---
 <% content_for :condiciones do %>
+  <style>
+  h4 small{
+    color: #000;
+  }
+  h4{
+    line-height: 1em;
+  }
+  .colonesValue, .dolaresValue{
+    display: none;
+  }
+  input#colonesSelector:checked ~ table tbody tr td span.colonesValue, input#dolaresSelector:checked ~ table tbody tr td span.dolaresValue{
+    display: inline;
+  }
+  table tbody tr td span, table tbody tr td, table thead tr th{
+    font-size: 11px;
+  }
+  table thead tr th, table tbody tr td{
+    text-align: center;
+  }
+  table thead tr th:first-child, table tbody tr td:first-child{
+    text-align: left;
+  }
+  </style>
   <div class="row">
     <div class="large-6 columns">
       <h3>Condiciones</h3>
@@ -41,14 +66,16 @@ requisitos:
       </ul>
 
       <h3>Exclusiones específicas:</h3>
-      <h4>Cobertura A: Robo y daños materiales</h4>
+      <h4>Cobertura A:
+        <br/><small>robo y daños materiales accidentales totales a bienes adquiridos con tarjeta de crédito o débito (Esta incompleta en la pagina de prueba)</small></h4>
       <ul>
         <li>Hurto</li>
         <li>Robo o daños ocasionados a bienes adquiridos de manera ilícita</li>
         <li>Uso normal, desgaste o daños provenientes de vicios propios que deriven de una defectuosa fabricación o que genera la responsabilidad del fabricante.</li>
       </ul>
 
-      <h4>Coberturas B y C: Renta alimenticia por muerte accidental del tarjetahabiente y cobertura de incapacidad total temporal por accidente</h4>
+      <h4>Coberturas B y C:
+        <br/><small>Renta alimenticia por muerte accidental del tarjetahabiente y cobertura de incapacidad total temporal por accidente</small></h4>
       <ul>
         <li>Lesiones provocadas en estado de enajenación mental.</li>
         <li>Lesiones provocadas por el propio asegurado.</li>
@@ -57,7 +84,8 @@ requisitos:
         <li>Tratamientos o intervenciones quirúrgicas de carácter estético</li>
       </ul>
 
-      <h4>Cobertura D:   Cobertura por desempleo involuntario</h4>
+      <h4>Cobertura D:
+        <br/><small>Cobertura por desempleo involuntario</small></h4>
       <ul>
         <li>Despido sin responsabilidad patronal</li>
         <li>Jubilación, retiro obligatorio o voluntario o ingreso al régimen de pensión del asegurado</li>
@@ -70,83 +98,94 @@ requisitos:
     </div>
     <div class="large-6 columns">
       <h3>Planes Y Primas</h3>
-      <table>
+      <label>Mostrar precios en:</label>
+      <input type="radio" name="currencySelector" value="Red" id="colonesSelector" style="display: inline-block; margin-right: 1em;" class="colones" checked="checked" ><label for="currencySelector" style="display: inline-block; margin-right: 1em;">Colones</label>
+      <input type="radio" name="currencySelector" value="Blue" id="dolaresSelector" style="display: inline-block; margin-right: 1em;" class="dolares"><label for="currencySelector" style="display: inline-block;">Dólares</label>
+      <table style="width: 100%; table-layout:fixed;">
         <thead>
           <tr>
-            <th colspan="6">Seguro autoexpedible de canasta protegida</th>
+            <th width="45%">Descripción de coberturas</th>
+            <th width="11%">Pagos</th>
+            <th width="11%">Plan 1</th>
+            <th width="11%">Plan 2</th>
+            <th width="11%">Plan 3</th>
+            <th width="11%">Plan 4</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr>
+            <td width="50%" class="text-left">Renta alimenticia mensual por muerte accidental</td>
+            <td>12 rentas</td>
+            <td><span class="colonesValue">&#x20A1;1.130.000</span><span class="dolaresValue">$2.000</span></td>
+            <td><span class="colonesValue">&#x20A1;790.000</span><span class="dolaresValue">$1.400</span></td>
+            <td><span class="colonesValue">&#x20A1;450.000</span><span class="dolaresValue">$800</span></td>
+            <td><span class="colonesValue">&#x20A1;280.000</span><span class="dolaresValue">$500</span></td>
           </tr>
           <tr>
-            <th>Coberturas</th>
-            <th>Plan A</th>
-            <th>Plan B</th>
-            <th>Plan C</th>
-            <th>Plan D</th>
-            <th>Eventos</th>
+            <td class="text-left">Desempleo involuntario</td>
+            <td>6 pagos</td>
+            <td><span class="colonesValue">&#x20A1;113.000</span><span class="dolaresValue">$200</span></td>
+            <td><span class="colonesValue">&#x20A1;113.000</span><span class="dolaresValue">$200</span></td>
+            <td><span class="colonesValue">&#x20A1;113.000</span><span class="dolaresValue">$200</span></td>
+            <td><span class="colonesValue">&#x20A1;113.000</span><span class="dolaresValue">$200</span></td>
+          </tr>
+          <tr>
+            <td class="text-left">Incapacidad total temporal</td>
+            <td>6 pagos</td>
+            <td><span class="colonesValue">&#x20A1;113.000</span><span class="dolaresValue">$200</span></td>
+            <td><span class="colonesValue">&#x20A1;113.000</span><span class="dolaresValue">$200</span></td>
+            <td><span class="colonesValue">&#x20A1;113.000</span><span class="dolaresValue">$200</span></td>
+            <td><span class="colonesValue">&#x20A1;113.000</span><span class="dolaresValue">$200</span></td>
+          </tr>
+          <tr>
+            <td class="text-left">Robo y daños materiales accidentales totlaes a bienes adquiridos con la tarjeta de crédito o débito</td>
+            <td>2 eventos</td>
+            <td><span class="colonesValue">&#x20A1;170.000</span><span class="dolaresValue">$300</span></td>
+            <td><span class="colonesValue">&#x20A1;170.000</span><span class="dolaresValue">$300</span></td>
+            <td><span class="colonesValue">&#x20A1;170.000</span><span class="dolaresValue">$300</span></td>
+            <td><span class="colonesValue">&#x20A1;170.000</span><span class="dolaresValue">$300</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table style="width: 100%;table-layout:fixed;">
+        <thead>
+          <tr>
+            <th width="40%">Edades</th>
+            <th width="15%">Plan 1</th>
+            <th width="15%">Plan 2</th>
+            <th width="15%">Plan 3</th>
+            <th width="15%">Plan 4</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Robo y daños materiales accidentales totales a bienes adquiridos con tarjeta de crédito o débito</td>
-            <td>&#x20A1;170.000</td>
-            <td>&#x20A1;170.000</td>
-            <td>&#x20A1;170.000</td>
-            <td>&#x20A1;170.000</td>
-            <td>2 eventos</td>
+            <td>18 - 64 años</td>
+            <td><span class="colonesValue">&#x20A1;7.000,00</span><span class="dolaresValue">$12,50</span></td>
+            <td><span class="colonesValue">&#x20A1;5.900,00</span><span class="dolaresValue">$10,50</span></td>
+            <td><span class="colonesValue">&#x20A1;4.600,00</span><span class="dolaresValue">$8,50</span></td>
+            <td><span class="colonesValue">&#x20A1;3.600,00</span><span class="dolaresValue">$6,50</span></td>
           </tr>
           <tr>
-            <td>Renta alimenticia por muerte accidental del tarjetahabiente</td>
-            <td>&#x20A1;1.130.000,00</td>
-            <td>&#x20A1;790.000,00</td>
-            <td>&#x20A1;450.000,00</td>
-            <td>&#x20A1;280.000,00</td>
-            <td>12 Rentas</td>
+            <td>65 - 79 años</td>
+            <td><span class="colonesValue">&#x20A1;28.000,00</span><span class="dolaresValue">$50,50</span></td>
+            <td><span class="colonesValue">&#x20A1;23.300,00</span><span class="dolaresValue">$41,50</span></td>
+            <td><span class="colonesValue">&#x20A1;18.500,00</span><span class="dolaresValue">$32,50</span></td>
+            <td><span class="colonesValue">&#x20A1;14.400,00</span><span class="dolaresValue">$25,50</span></td>
           </tr>
           <tr>
-            <td>Cobertura de incapacidad total temporal por accidente</td>
-            <td>&#x20A1;113.000</td>
-            <td>&#x20A1;113.000</td>
-            <td>&#x20A1;113.000</td>
-            <td>&#x20A1;113.000</td>
-            <td>6 pagos</td>
+            <td>80 - 84 años</td>
+            <td><span class="colonesValue">&#x20A1;41.900,00</span><span class="dolaresValue">$73,90</span></td>
+            <td><span class="colonesValue">&#x20A1;35.000,00</span><span class="dolaresValue">$61,70</span></td>
+            <td><span class="colonesValue">&#x20A1;27.700,00</span><span class="dolaresValue">$48,00</span></td>
+            <td><span class="colonesValue">&#x20A1;21.500,00</span><span class="dolaresValue">$38,00</span></td>
           </tr>
           <tr>
-            <td>Cobertura por desempleo involuntario</td>
-            <td colspan="4"></td>
-          </tr>
-          <tr>
-            <th colspan="6">Primas</th>
-          </tr>
-          <tr>
-            <td>18-64 años</td>
-            <td>&#x20A1;7.000,00</td>
-            <td>&#x20A1;5.900,00</td>
-            <td>&#x20A1;4.600,00</td>
-            <td>&#x20A1;3.600,00</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>65-79 años</td>
-            <td>&#x20A1;28.000,00</td>
-            <td>&#x20A1;23.300,00</td>
-            <td>&#x20A1;18.500,00</td>
-            <td>&#x20A1;14.400,00</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>80-84 años</td>
-            <td>&#x20A1;41.900,00</td>
-            <td>&#x20A1;35.000,00</td>
-            <td>&#x20A1;27.700,00</td>
-            <td>&#x20A1;21.500,00</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>85 años o más</td>
-            <td>&#x20A1;62.800,00</td>
-            <td>&#x20A1;52.400,00</td>
-            <td>&#x20A1;41.500,00</td>
-            <td>&#x20A1;32.300,00</td>
-            <td></td>
+            <td>85 años y más</td>
+            <td><span class="colonesValue">&#x20A1;62.600,00</span><span class="dolaresValue">$111,00</span></td>
+            <td><span class="colonesValue">&#x20A1;52.400,00</span><span class="dolaresValue">$92,50</span></td>
+            <td><span class="colonesValue">&#x20A1;41.500,00</span><span class="dolaresValue">$73,20</span></td>
+            <td><span class="colonesValue">&#x20A1;32.300,00</span><span class="dolaresValue">$57,00</span></td>
           </tr>
         </tbody>
       </table>

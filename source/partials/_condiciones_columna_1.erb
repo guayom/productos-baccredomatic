@@ -1,0 +1,32 @@
+<% unless current_page.data.condiciones.nil? %>
+  <h3>Condiciones</h3>
+  <p><%= current_page.data.condiciones %></p>
+<% end %>
+
+<% unless current_page.data.moneda.nil? %>
+  <h3>Moneda</h3>
+  <p><%= current_page.data.moneda %></p>
+<% end %>
+
+<% unless current_page.data.modalidad.nil? %>
+  <h3>Modalidad</h3>
+  <p><%= current_page.data.modalidad %></p>
+<% end %>
+
+<% unless current_page.data.coberturas.nil? %>
+  <h3>Coberturas</h3>
+  <ul>
+    <% current_page.data.coberturas.each do |cobertura| %>
+      <li><%= cobertura %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<% unless current_page.data.coberturas.nil? %>
+  <h3>Exclusiones</h3>
+  <ul>
+    <% current_page.data.exclusiones.each do |exclusion| %>
+      <li><%= exclusion %></li>
+    <% end %>
+  </ul>
+<% end %>

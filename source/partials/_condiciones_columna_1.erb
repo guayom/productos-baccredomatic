@@ -3,6 +3,10 @@
   <p><%= current_page.data.condiciones %></p>
 <% end %>
 
+<% unless current_page.data.pdf.nil? %>
+  <p>Descargue las condiciones generales haciendo <a href="<%= current_page.data.pdf %>">click aquí</a></p>
+<% end %>
+
 <% unless current_page.data.moneda.nil? %>
   <h3>Moneda</h3>
   <p><%= current_page.data.moneda %></p>

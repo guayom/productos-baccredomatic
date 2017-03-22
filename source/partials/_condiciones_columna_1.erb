@@ -1,5 +1,5 @@
+<h3>Condiciones</h3>
 <% unless current_page.data.condiciones.nil? %>
-  <h3>Condiciones</h3>
   <p><%= current_page.data.condiciones %></p>
 <% end %>
 
@@ -26,11 +26,12 @@
   </ul>
 <% end %>
 
-<% unless current_page.data.coberturas.nil? %>
+<% unless current_page.data.exclusiones.nil? %>
   <h3>Exclusiones</h3>
   <ul>
     <% current_page.data.exclusiones.each do |exclusion| %>
       <li><%= exclusion %></li>
     <% end %>
+    <li>Para mayor detalle de exclusiones y producto sírvase ingresar a la página www.sugese.fi.cr, bajo el registro <%= current_page.data.numero_de_producto %> para obtener condiciones generales</li>
   </ul>
 <% end %>

@@ -19,16 +19,12 @@
                   <%= yield_content :columna_1_top %>
                   <%= partial "partials/condiciones_columna_1" %>
                   <%= yield_content :columna_1_bottom %>
+                  <p>Descargue las condiciones generales haciendo <a href="<%= current_page.data.pdf %>">click aquí</a>, bajo el registro <%= current_page.data.numero_de_producto %></p>
                 </div>
                 <div class="large-6 columns">
                   <%= yield %>
                   <%= partial "partials/condiciones_columna_2" %>
                   <%= yield_content :columna_2_bottom %>
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12">
-                  <p><strong>Para mayor detalle en exclusiones generales sírvase leer el condicionado SUGESE <%= current_page.data.numero_de_producto %></strong></p>
                 </div>
               </div>
               <%= partial "partials/condiciones" %>

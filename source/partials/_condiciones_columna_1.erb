@@ -1,12 +1,3 @@
-<h3>Condiciones</h3>
-<% unless current_page.data.condiciones.nil? %>
-  <p><%= current_page.data.condiciones %></p>
-<% end %>
-
-<% unless current_page.data.pdf.nil? %>
-  <p>Descargue las condiciones generales haciendo <a href="<%= current_page.data.pdf %>">click aquí</a></p>
-<% end %>
-
 <% unless current_page.data.moneda.nil? %>
   <h3>Moneda</h3>
   <p><%= current_page.data.moneda %></p>
@@ -32,6 +23,10 @@
     <% current_page.data.exclusiones.each do |exclusion| %>
       <li><%= exclusion %></li>
     <% end %>
-    <li>Para mayor detalle de exclusiones y producto sírvase ingresar a la página www.sugese.fi.cr, bajo el registro <%= current_page.data.numero_de_producto %> para obtener condiciones generales</li>
   </ul>
 <% end %>
+
+<!-- <h3>Condiciones</h3>
+<% unless current_page.data.condiciones.nil? %>
+  <p><%= current_page.data.condiciones %></p>
+<% end %> -->

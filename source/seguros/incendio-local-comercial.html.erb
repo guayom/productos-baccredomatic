@@ -58,19 +58,22 @@ numero_para_reclamos: 2010-3000
   </ul>
 <% end %>
 
-<h3>Planes</h3>
-<table>
+<h3>Planes y Primas</h3>
+<label>Mostrar precios en:</label>
+<input type="radio" name="currencySelector" value="Red" id="colonesSelector" style="display: inline-block; margin-right: 1em;" class="colones" checked="checked" ><label for="currencySelector" style="display: inline-block; margin-right: 1em;">Colones</label>
+
+<input type="radio" name="currencySelector" value="Blue" id="dolaresSelector" style="display: inline-block; margin-right: 1em;" class="dolares"><label for="currencySelector" style="display: inline-block;">Dólares</label>
+
+<table class="colonesValue">
   <thead>
     <tr>
-      <th colspan="6" class="text-center">COLONES</th>
+      <th>Plan</th>
+      <th class="text-right">MONTO ASEGURADO</th>
+      <th class="text-right">ANUAL</th>
+      <th class="text-right">SEMESTRAL</th>
+      <th class="text-right">TRIMESTRAL</th>
+      <th class="text-right">MENSUAL</th>
     </tr>
-    <tr>
-      <td>Plan</td>
-      <td class="text-right">MONTO ASEGURADO</td>
-      <td class="text-right">ANUAL</td>
-      <td class="text-right">SEMESTRAL</td>
-      <td class="text-right">TRIMESTRAL</td>
-      <td class="text-right">MENSUAL</td>
   </thead>
   <tbody>
     <tr>
@@ -123,18 +126,16 @@ numero_para_reclamos: 2010-3000
     </tr>
 </table>
 
-<table>
+<table class="dolaresValue">
   <thead>
     <tr>
-      <th colspan="6" class="text-center">DÓLARES</th>
+      <th>Plan</th>
+      <th class="text-right">MONTO ASEGURADO</th>
+      <th class="text-right">ANUAL</th>
+      <th class="text-right">SEMESTRAL</th>
+      <th class="text-right">TRIMESTRAL</th>
+      <th class="text-right">MENSUAL</th>
     </tr>
-    <tr>
-      <td>Plan</td>
-      <td class="text-right">MONTO ASEGURADO</td>
-      <td class="text-right">ANUAL</td>
-      <td class="text-right">SEMESTRAL</td>
-      <td class="text-right">TRIMESTRAL</td>
-      <td class="text-right">MENSUAL</td>
   </thead>
   <tbody>
     <tr>

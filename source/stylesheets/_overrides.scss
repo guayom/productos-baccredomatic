@@ -10,9 +10,14 @@ h4{
 .colonesValue, .dolaresValue{
   display: none;
 }
-input#colonesSelector:checked ~ table tbody tr td span.colonesValue, input#dolaresSelector:checked ~ table tbody tr td span.dolaresValue{
+input#colonesSelector:checked ~ table tbody tr td span.colonesValue, input#dolaresSelector:checked ~ table tbody tr td span.dolaresValue {
   display: inline;
 }
+
+input#colonesSelector:checked ~ table.colonesValue, input#dolaresSelector:checked ~ table.dolaresValue {
+  display: table;
+}
+
 table {
   width: 100%;
 }

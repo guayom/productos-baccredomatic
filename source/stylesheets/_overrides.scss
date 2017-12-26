@@ -18,6 +18,16 @@ input#colonesSelector:checked ~ table.colonesValue, input#dolaresSelector:checke
   display: table;
 }
 
+#contenedorColones, #contenedorDolares {
+  display: none;
+}
+input#colonesSelector:checked ~ #contenedorColones {
+  display: block;
+}
+input#dolaresSelector:checked ~ #contenedorDolares {
+  display: block;
+}
+
 table {
   width: 100%;
 }

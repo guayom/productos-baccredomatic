@@ -50,44 +50,98 @@ numero_para_reclamos: 4101-0000
 </ul>
 <% end %>
 <h3>Planes y primas</h3>
-<table>
-  <thead>
-    <tr>
-      <th width="50%">Cobertura</th>
-      <th width="50%" style="text-align: right;">Indemnización</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Cobertura básica de fallecimiento</td>
-      <td style="text-align: right;">&#x20A1;1.375.000</td>
-    </tr>
-    <tr>
-      <td>Cobertura adicional de muerte accidental</td>
-      <td style="text-align: right;">&#x20A1;2.750.000</td>
-    </tr>
-    <tr>
-      <td>Cobertura adicional de muerte accidental en transporte privado</td>
-      <td style="text-align: right;">&#x20A1;4.125.000</td>
-    </tr>
-    <tr>
-      <td>Cobertura adicional de muerte accidental en transporte público:</td>
-      <td style="text-align: right;">&#x20A1;5.500.000</td>
-    </tr>
-    <tr>
-      <th colspan="2">Primas</th>
-    </tr>
-    <tr>
-      <td>18-64 años</td>
-      <td style="text-align: right;">&#x20A1;1.900</td>
-    </tr>
-    <tr>
-      <td>65-74 años</td>
-      <td style="text-align: right;">&#x20A1;22.200</td>
-    </tr>
-    <tr>
-      <td>75 años o más</td>
-      <td style="text-align: right;">&#x20A1;30.300</td>
-    </tr>
-  </tbody>
-</table>
+<p>Adquirilo desde $3,50 según el plan elegido</p>
+
+<input type="radio" id="colonesSelector" name="tabla" checked="checked">&nbsp;Colones</input>
+&nbsp;
+<input type="radio" id="dolaresSelector" name="tabla">&nbsp;Dólares</input>
+
+<div id="contenedorColones">
+  <table>
+    <thead>
+      <tr>
+        <th>Coberturas</th>
+        <th>Suma Asegurada</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Cobertura por fallecimiento (Cobertura básica)</td>
+        <td style="text-align: right;">&#x20A1;1.375.000</td>
+      </tr>
+      <tr>
+        <td>Cobertura adicional de muerte accidental</td>
+        <td style="text-align: right;">&#x20A1;1.375.000</td>
+      </tr>
+      <tr>
+        <td>Cobertura de muerte accidental en Vehículo de Transporte Privado</td>
+        <td style="text-align: right;">&#x20A1;1.375.000</td>
+      </tr>
+      <tr>
+        <td>Cobertura de muerte accidental en Vehículo de Transporte Público</td>
+        <td style="text-align: right;">&#x20A1;2.750.000</td>
+      </tr>
+      <tr>
+        <td>Aistencias: Médica telefónica y de Ambulacia Terrestre Emergencial</td>
+        <td style="text-align: right;">No</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>* Monto máximo a indemnizar es de &#x20A1;5.500.000</p>
+</div>
+<div id="contenedorDolares">
+  <table>
+    <thead>
+      <tr>
+        <td>Coberturas</td>
+        <td width="20%" style="text-align: center;">Plan 1</td>
+        <td width="20%" style="text-align: center;">Plan 2</td>
+        <td width="20%" style="text-align: center;">Plan 3</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Muerte por cualquier causa</td>
+        <td>$5.000</td>
+        <td>$7.500</td>
+        <td>$15.000</td>
+      </tr>
+      <tr>
+        <td>Muerte accidental</td>
+        <td>$10.000</td>
+        <td>$15.000</td>
+        <td>$30.000</td>
+      </tr>
+      <tr>
+        <td>Muerte en trasnporte privado</td>
+        <td>$15.000</td>
+        <td>$22.500</td>
+        <td>$45.000</td>
+      </tr>
+      <tr>
+        <td>Muerte en trasnporte público</td>
+        <td>$20.000</td>
+        <td>$30.000</td>
+        <td>$60.000</td>
+      </tr>
+      <tr>
+        <td>Asistencia</td>
+        <td>Incluída</td>
+        <td>Incluída</td>
+        <td>Incluída</td>
+      </tr>
+      <tr>
+        <td><strong>Prima de venta (Hasta 65 años)</strong></td>
+        <td><strong>$9,50</strong></td>
+        <td><strong>$12,50</strong></td>
+        <td><strong>$20,00</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Prima de venta (Más de 65 años)</strong></td>
+        <td><strong>$79,00</strong></td>
+        <td><strong>$115,50</strong></td>
+        <td><strong>$205,00</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -25,7 +25,7 @@ requisitos:
   - Ser mayor de 18 años
 
 numero_de_producto: P14-26-A07-654
-moneda: Colones
+moneda: Colones y Dólares
 modalidad: Colectivo
 numero_para_reclamos: 4101-0000
 ---
@@ -52,7 +52,58 @@ numero_para_reclamos: 4101-0000
 <% content_for :columna_1_bottom_end do %>
   <p><small>Seguro colectivo de vida es de aceptación voluntaria, registrado en la Superintendencia General de Seguros, bajo el código de registro P14-26-A07-654  ( colones) / P14-26-A07-647 ( dólares ) por la aseguradora ASEGURADORA DEL ISTMO (ADISA) S.A.</small></p>
 <% end %>
-<h3>Planes y primas</h3>
+<h3>Planes básicos</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Coberturas</th>
+      <th>Dólares</th>
+      <th>Colones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cobertura por fallecimiento</td>
+      <td>$2,500</td>
+      <td>₡1,375,000</td>
+    </tr>
+    <tr>
+      <td>Muerte Accidental</td>
+      <td>$2,500.00</td>
+      <td>₡1,375,000</td>
+    </tr>
+    <tr>
+      <td>Muerte Accidental Transporte Publico</td>
+      <td>$2,500.00</td>
+      <td>₡1,375,000</td>
+    </tr>
+    <tr>
+      <td>Muerte Accidental Transporte Privado</td>
+      <td>$5,000.00</td>
+      <td>₡2,750,000</td>
+    </tr>
+    <tr>
+      <td>Prima de Venta ( 18 - 64 años)</td>
+      <td>$3.50</td>
+      <td>₡1,900.00</td>
+    </tr>
+    <tr>
+      <td>Prima de Venta ( 65 - 74 años)</td>
+      <td>$40.50</td>
+      <td>₡22,200.00</td>
+    </tr>
+    <tr>
+      <td>Prima de Venta ( 75 años - adelante)</td>
+      <td>$55.50</td>
+      <td>₡30,300.00</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>* Monto máximo a indemnizar es de &#x20A1;5.500.000</p>
+
+<h3>Planes y primas Premium</h3>
 <p>Adquirilo desde $3,50 o &#x20A1;1900, según el plan elegido</p>
 
 <input type="radio" id="colonesSelector" name="tabla" checked="checked">&nbsp;Colones</input>
@@ -72,7 +123,7 @@ numero_para_reclamos: 4101-0000
     </thead>
     <tbody>
       <tr>
-        <td>Muerte por cualquier causa</td>
+        <td>Fallecimiento por cualquier causa</td>
         <td>&#x20A1;3.000.000</td>
         <td>&#x20A1;4.500.000</td>
         <td>&#x20A1;9.000.000</td>
@@ -116,7 +167,6 @@ numero_para_reclamos: 4101-0000
     </tbody>
   </table>
 
-  <p>* Monto máximo a indemnizar es de &#x20A1;5.500.000</p>
 
 </div>
 <div id="contenedorDolares">
@@ -131,7 +181,7 @@ numero_para_reclamos: 4101-0000
     </thead>
     <tbody>
       <tr>
-        <td>Muerte por cualquier causa</td>
+        <td>Fallecimiento por cualquier causa</td>
         <td>$5.000</td>
         <td>$7.500</td>
         <td>$15.000</td>
